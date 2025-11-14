@@ -1,8 +1,9 @@
 import './MailboxForm.css'
-
+import {useNavigate} from 'react-router'
 
 
 const MailboxForm = ({ noOfMailboxes, addBox }) => {
+const navigate = useNavigate()
 
     const handleSumbitForm = (e) => {
         console.log(`there are currently ${noOfMailboxes} registered mailboxes`)
@@ -13,9 +14,9 @@ const MailboxForm = ({ noOfMailboxes, addBox }) => {
         console.log('the owner name is ', owner)
         console.log('the selected size is ', size)
         addBox(size,owner)
+        navigate ('/mailboxes')
+
     }
-
-
     return (
         <>
             <h1>New Mailbox</h1>

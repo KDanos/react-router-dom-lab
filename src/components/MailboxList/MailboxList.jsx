@@ -1,8 +1,27 @@
 import './MailboxList.css'
+import { Link } from 'react-router'
 
-const MailboxList = () => {
+const MailboxList = ({ mailbox }) => {
+
+    console.log(`The current mailboxes are ${mailbox.length}`)
+
     return (
-        <h1>This is the list of your mailboxes</h1>
+        <div>
+            {mailbox.length == 0 ? (
+
+                <h1>No mailboxes have yet been bought</h1>
+            ) : (
+                <>
+                    <h1>Mailbox List</h1>
+                    {mailbox.map(box => (
+
+                        <Link key={box._id} to={`/mailboxes/${box._id}`}>Mailbox {box._id}</Link>
+
+                    ))}
+                </>
+
+            )}
+        </div>
     )
 }
 export default MailboxList

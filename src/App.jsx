@@ -20,7 +20,7 @@ const addBox = (size, owner) => {
   const newMailbox = {
     _id: noOfMailboxes + 1,
     boxSize: size,
-    bowOwner: owner,
+    owner: owner,
   }
   setMailbox([...mailbox, newMailbox])
 }
