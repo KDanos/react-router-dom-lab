@@ -13,11 +13,11 @@ const MailboxList = ({ mailbox }) => {
             ) : (
                 <>
                     <h1>Mailbox List</h1>
+                    <div id="mailbox-list">
                     {mailbox.map(box => (
-
                         <Link key={box._id} to={`/mailboxes/${box._id}`}>Mailbox {box._id}</Link>
-
                     ))}
+                    </div>
                 </>
 
             )}

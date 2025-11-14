@@ -15,7 +15,6 @@ const navigate = useNavigate()
         console.log('the selected size is ', size)
         addBox(size,owner)
         navigate ('/mailboxes')
-
     }
     return (
         <>
@@ -24,7 +23,7 @@ const navigate = useNavigate()
                 <label htmlFor="name"></label>
                 <input type="text" id="name" name="name" placeholder="e.g. Paul Mikerson" />
                 <label htmlFor="size">Select a size</label>
-                <select id="size" name="size" defaultValue="large" >
+                <select id="size" name="size" defaultValue="medium" >
                     <option value="small">Small</option>
                     <option value="medium">Medium</option>
                     <option value="large">Large</option>
